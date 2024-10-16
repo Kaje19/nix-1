@@ -51,7 +51,6 @@
                     <div class="fields">
                         <div class="field">
                             <select name="event_type" id="event_type">
-                                <option value="">Choose Event Type</option>
                                 @foreach ($uniquePackageType as $package)
                                     <option value="{{ $package->package_type }}">
                                         {{ $package->package_type }}
@@ -61,7 +60,6 @@
                         </div>
                         <div class="field">
                             <select name="guests" id="guests">
-                                <option value="">Re-estimated Guests</option>
                                 @foreach ($uniquePackageGuest as $package)
                                     <option value="{{ $package->package_guest }}">
                                         {{ $package->package_guest }}
@@ -78,7 +76,7 @@
                     </div>
 
                     <div class="fields group">
-                        <label for="motifs">Select Motifs</label>
+                        <label for="motifs">Select Motifs(Max 3)</label>
                         <ul class="options">
                             <li class="option">
                                 <label for="whimsical">Whimsical</label>

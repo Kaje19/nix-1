@@ -23,7 +23,7 @@
         <main class="services-container">
             <section class="services-group">
                 <header>
-                    <h2 class="title">Wedding Planning Services</h2>
+                    <h2 class="title">Wedding</h2>
                 </header>
                 <div class="content">
                     <div class="group-content">

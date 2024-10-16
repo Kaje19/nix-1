@@ -425,6 +425,7 @@ form .fields .actions .actions-group {
 
 input[type="checkbox"]:checked {
     color: var(--brown-500);
+    text-emphasis-color: white;
 }
 
 /* Options Motif */
