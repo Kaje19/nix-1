@@ -1,0 +1,172 @@
+/* Event Packages */
+.packages-container {
+    padding: 2em 8em; /* Padding for the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.packages-container header {
+    display: flex;
+    gap: 0.4em; /* Space between elements */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flexbox for 3 columns layout */
+.packages-container .content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Space between items */
+}
+
+.packages-container .content .package-item {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(33.33% - 1em); /* Three columns with equal width */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Set height for the image and styling */
+.packages-container .content .package-item img {
+    height: 200px; /* Fixed height for images */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Cover the area without distortion */
+    object-position: top; /* Position the image at the top */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Description styling */
+.packages-container .content .package-item .description {
+    text-align: center; /* Center the description text */
+    margin: 1em 0; /* Margin for spacing */
+}
+
+/* Button styling */
+.packages-container .content .package-item .actions {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    gap: 1em; /* Space between buttons */
+    width: 100%; /* Full width for buttons */
+}
+
+/* Add button for new package */
+.add-package-item {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    width: calc(33.33% - 1em); /* Same width as package items */
+    height: 200px; /* Fixed height to match other items */
+    border: 2px dashed var(--green-500); /* Dashed border for add button */
+    border-radius: 8px; /* Rounded corners */
+    color: var(--green-500); /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Center align text */
+    font-size: 1.2em; /* Font size */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+.add-package-item:hover {
+    background-color: rgba(220, 220, 220, 0.5); /* Light background on hover */
+}
+
+/* Responsive design */
+@media (max-width: 728px) {
+    .packages-container .content .package-item {
+        width: calc(100% - 1em); /* Full width for smaller screens */
+    }
+
+    .add-package-item {
+        width: calc(100% - 1em); /* Full width for add button */
+    }
+}
+
+/* General Container Styles */
+.container {
+    max-width: 1200px; /* Limit the max width */
+    margin: 0 auto; /* Center the container */
+    padding: 2em; /* Padding for spacing */
+    margin-top: 5rem;
+}
+
+/* Heading Styles */
+.container h1 {
+    font-size: 2.5rem; /* Font size for the main heading */
+    text-align: center; /* Center align the heading */
+    color: var(--brown-500); 
+    margin: 6rem 0 1.5em; /* Space below the heading */
+}
+
+/* Alert Message Styles */
+.alert {
+    padding: 1em; /* Padding for alerts */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 1.5em; /* Space below alerts */
+    text-align: center; /* Center align the text */
+}
+
+.alert-success {
+    background-color: #dff0d8; /* Light green background for success */
+    color: #3c763d; /* Dark green text */
+}
+
+.alert-danger {
+    background-color: #f2dede; /* Light red background for danger */
+    color: #a94442; /* Dark red text */
+}
+
+/* Event Packages Container Styles */
+.event-packages {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: space-between; /* Space between items */
+    gap: 1.5em; /* Gap between items */
+}
+
+/* Individual Package Item Styles */
+.service-item {
+    background-color: #fff; /* White background for items */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1 1 calc(33.33% - 1em); /* Flex properties for three items per row */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 1em; /* Inner padding */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+/* Image Styling */
+.service-item img {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+}
+
+/* Title and Description Styling */
+.service-item h2 {
+    font-size: 1.5rem; /* Font size for titles */
+    color: var(--brown-500); /* Change to your preferred color */
+    margin: 0.5em 0; /* Space above and below title */
+}
+
+.service-item p {
+    color: #555; /* Darker text for paragraphs */
+    margin: 0.3em 0; /* Space above and below paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(50% - 1em); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 1 1 100%; /* One item per row on very small screens */
+    }
+}

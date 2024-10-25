@@ -114,39 +114,85 @@ nav .right-content {
   }
 }
 
+
 /* Footer */
 footer {
-  background-color: var(--brown-200);
-  padding: 1em 8em;
-  gap: 4em;
+  background-color: var(--brown-200); 
+  padding: 2em 4em;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; 
+  gap: 2em;
 }
 
-footer .address,
-footer .contacts {
-  max-width: 12em;
+
+footer .footer-section {
+  text-align: left; 
+  max-width: 20em;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  margin-right: 1.5rem;
 }
 
-footer .address .title,
-footer .contacts .title {
+
+footer .footer-section.address {
+  margin-left: auto;
+}
+
+footer h3 {
+  font-size: 1.4em;
+  color: var(--brown-900);
+  margin-bottom: 0.5em;
+}
+
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  color: var(--brown-900);
+}
+
+
+footer ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em; 
+}
+
+
+footer .footer-center {
   font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--brown-700);
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+
+footer .footer-section ul li a {
+  text-decoration: none;
+  color: var(--brown-900);
+}
+
+footer .footer-section ul li a:hover {
   color: var(--brown-700);
 }
 
-footer .title {
-  text-align: center;
-  flex: 1;
-  white-space: nowrap;
-}
 
-@media (min-width: 728px) {
+@media (min-width: 768px) {
   footer {
     flex-direction: row;
+  }
+
+  footer .footer-section {
+    text-align: left;
   }
 }
